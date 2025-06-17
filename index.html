@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软件开发项目大数据展示屏</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 背景动效 -->
+    <div class="background-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- 主标题区域 - 优化为左右布局 -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <!-- 左侧可以放置logo或其他内容 -->
+            </div>
+            <div class="header-center">
+                <h1 class="main-title">
+                    <span class="title-highlight">软件开发项目大数据展示屏</span>
+                </h1>
+            </div>
+            <div class="header-right">
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="14">0</span>
+                        <span class="stat-label">开发人员</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">班级团队</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="8">0</span>
+                        <span class="stat-label">项目模块</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 学生作品展示区域 -->
+        <section class="section projects-showcase">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="icon">🚀</span>
+                    学生作品展示
+                </h2>
+                <div class="section-subtitle">主流软件项目成果</div>
+            </div>
+            <div class="projects-showcase-container">
+                <div class="main-project-display">
+                    <div class="project-image-large">
+                        <div class="image-carousel" id="main-carousel">
+                            <!-- 图片将通过JavaScript动态加载 -->
+                            <div class="project-placeholder">
+                                <span class="project-icon">🚀</span>
+                                <span class="project-type">学生作品展示</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-large">
+                        <h3 id="current-project-title">电商管理系统</h3>
+                        <p id="current-project-desc">React + Node.js + MongoDB</p>
+                        <div class="project-tags" id="current-project-tags">
+                            <span class="tag">前端开发</span>
+                            <span class="tag">后端开发</span>
+                            <span class="tag">数据库设计</span>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-info">
+                                <span>项目进度</span>
+                                <span id="current-progress">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-indicators">
+                    <div class="indicator active" data-project="0"></div>
+                    <div class="indicator" data-project="1"></div>
+                    <div class="indicator" data-project="2"></div>
+                    <div class="indicator" data-project="3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目分工展示区域 -->
+        <section class="section team-division">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="icon">👥</span>
+                    项目分工结构
+                </h2>
+                <div class="section-subtitle">2301+2302班级 14名开发人员</div>
+            </div>
+            <div class="team-container">
+                <div class="team-scroll-wrapper">
+                    <div class="team-scroll-content" id="team-scroll">
+                        <!-- 2301班成员 -->
+                        <div class="member-card" data-role="frontend" data-class="2301">
+                            <div class="member-avatar">张</div>
+                            <div class="member-info">
+                                <span class="member-name">张宝胜 (2301班)</span>
+                                <span class="member-module">用户界面模块</span>
+                                <span class="member-progress">92%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="backend" data-class="2301">
+                            <div class="member-avatar">贾</div>
+                            <div class="member-info">
+                                <span class="member-name">贾延飞 (2301班)</span>
+                                <span class="member-module">服务端API模块</span>
+                                <span class="member-progress">87%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="fullstack" data-class="2301">
+                            <div class="member-avatar">樊</div>
+                            <div class="member-info">
+                                <span class="member-name">樊钰杭 (2301班)</span>
+                                <span class="member-module">数据处理模块</span>
+                                <span class="member-progress">90%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="mobile" data-class="2301">
+                            <div class="member-avatar">冷</div>
+                            <div class="member-info">
+                                <span class="member-name">冷立淼 (2301班)</span>
+                                <span class="member-module">移动端模块</span>
+                                <span class="member-progress">85%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="ui" data-class="2301">
+                            <div class="member-avatar">周</div>
+                            <div class="member-info">
+                                <span class="member-name">周福奥 (2301班)</span>
+                                <span class="member-module">交互设计模块</span>
+                                <span class="member-progress">95%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="devops" data-class="2301">
+                            <div class="member-avatar">赵</div>
+                            <div class="member-info">
+                                <span class="member-name">赵剑俊 (2301班)</span>
+                                <span class="member-module">部署运维模块</span>
+                                <span class="member-progress">88%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="test" data-class="2301">
+                            <div class="member-avatar">史</div>
+                            <div class="member-info">
+                                <span class="member-name">史鑫浩 (2301班)</span>
+                                <span class="member-module">测试验证模块</span>
+                                <span class="member-progress">91%</span>
+                            </div>
+                        </div>
+                        <!-- 2302班成员 -->
+                        <div class="member-card" data-role="ai" data-class="2302">
+                            <div class="member-avatar">李</div>
+                            <div class="member-info">
+                                <span class="member-name">李明仁 (2302班)</span>
+                                <span class="member-module">智能算法模块</span>
+                                <span class="member-progress">89%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="data" data-class="2302">
+                            <div class="member-avatar">袁</div>
+                            <div class="member-info">
+                                <span class="member-name">袁玉杰 (2302班)</span>
+                                <span class="member-module">数据分析模块</span>
+                                <span class="member-progress">93%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="security" data-class="2302">
+                            <div class="member-avatar">代</div>
+                            <div class="member-info">
+                                <span class="member-name">代金琳 (2302班)</span>
+                                <span class="member-module">安全防护模块</span>
+                                <span class="member-progress">86%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="game" data-class="2302">
+                            <div class="member-avatar">喻</div>
+                            <div class="member-info">
+                                <span class="member-name">喻想 (2302班)</span>
+                                <span class="member-module">游戏引擎模块</span>
+                                <span class="member-progress">84%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="cloud" data-class="2302">
+                            <div class="member-avatar">石</div>
+                            <div class="member-info">
+                                <span class="member-name">石其宾 (2302班)</span>
+                                <span class="member-module">云服务模块</span>
+                                <span class="member-progress">91%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="blockchain" data-class="2302">
+                            <div class="member-avatar">赵</div>
+                            <div class="member-info">
+                                <span class="member-name">赵晨 (2302班)</span>
+                                <span class="member-module">区块链模块</span>
+                                <span class="member-progress">82%</span>
+                            </div>
+                        </div>
+                        <div class="member-card" data-role="pm" data-class="2302">
+                            <div class="member-avatar">宋</div>
+                            <div class="member-info">
+                                <span class="member-name">宋勇博 (2302班)</span>
+                                <span class="member-module">项目管理模块</span>
+                                <span class="member-progress">96%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学习情况展示区域 -->
+        <section class="section learning-stats">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="icon">📊</span>
+                    学习情况统计
+                </h2>
+                <div class="section-subtitle">项目进度与学习成果</div>
+            </div>
+            <div class="stats-container">
+                <!-- 左列：统计卡片 -->
+                <div class="stats-left">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">⏱️</div>
+                            <div class="stat-content">
+                                <h3>项目周期</h3>
+                                <div class="stat-value">12周</div>
+                                <div class="stat-desc">从需求分析到项目交付</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">💻</div>
+                            <div class="stat-content">
+                                <h3>代码提交</h3>
+                                <div class="stat-value">1,247</div>
+                                <div class="stat-desc">累计代码提交次数</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🔧</div>
+                            <div class="stat-content">
+                                <h3>技术栈</h3>
+                                <div class="stat-value">15+</div>
+                                <div class="stat-desc">掌握的技术和工具</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🎯</div>
+                            <div class="stat-content">
+                                <h3>完成率</h3>
+                                <div class="stat-value">96%</div>
+                                <div class="stat-desc">项目功能完成度</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右列：项目时间线 -->
+                <div class="stats-right">
+                    <div class="timeline-container">
+                        <h3 class="timeline-title">项目开发时间线</h3>
+                        <div class="timeline">
+                            <div class="timeline-item completed">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>需求分析</h4>
+                                    <span class="timeline-date">第1-2周</span>
+                                    <p>市场调研、用户需求分析、技术选型</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item completed">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>系统设计</h4>
+                                    <span class="timeline-date">第3-4周</span>
+                                    <p>架构设计、数据库设计、接口设计</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item completed">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>核心开发</h4>
+                                    <span class="timeline-date">第5-9周</span>
+                                    <p>前后端开发、核心功能实现</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item completed">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>测试部署</h4>
+                                    <span class="timeline-date">第10-12周</span>
+                                    <p>系统测试、性能优化、部署上线</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部信息 -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <span>实时更新时间：<span id="currentTime"></span></span>
+                <span>项目展示版本：v2.0</span>
+            </div>
+            <div class="footer-logo">
+                <span class="logo-text">软件开发实训项目</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 数据图表弹窗模态框 -->
+    <div class="chart-modal" id="chartModal">
+        <div class="chart-modal-content">
+            <div class="chart-modal-header">
+                <h3 id="chartTitle">数据图表</h3>
+                <button class="chart-close-btn" id="chartCloseBtn">&times;</button>
+            </div>
+            <div class="chart-modal-body">
+                <canvas id="chartCanvas" width="800" height="400"></canvas>
+                <div id="chartContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
